@@ -4,7 +4,7 @@ import DeleteIcon from '@material-ui/icons/Delete';
 
 const Note = props => {
 
-
+  //function for deleting a note
   const handleClick = () => {
     props.onDelete(props.id);
   }

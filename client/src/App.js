@@ -5,6 +5,7 @@ import CreateNote from "./components/CreateNote";
 import axios from 'axios';
 
 const App = () => {
+  //defining the notes array state
   const [notes, setNotes] = useState([]);
 
   const addNote = newNote => {
@@ -13,6 +14,7 @@ const App = () => {
     });
   }
 
+  //this function makes a request to the backend using axios in order to delete a single note
   const deleteNote = id => {
     axios.delete('/notes/'+id)
       .then(response => { console.log(response.data)});

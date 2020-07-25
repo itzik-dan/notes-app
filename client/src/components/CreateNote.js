@@ -14,6 +14,7 @@ const CreateNote = props => {
     date: ""
   });
 
+  //this function will update the node fields update to what the user types
   const handleChange = event => {
     const { name, value } = event.target;
 
@@ -25,6 +26,7 @@ const CreateNote = props => {
     });
   }
 
+  // on clicking the + button this function will add the node to the notes array and add the note to db
   const submitNote = event => {
     props.onAdd(note);
     console.log(note)
